@@ -96,7 +96,7 @@
     <section class="section">
             
     <div class="container">
-    <h2 class="title is-2 section-title">Nos missions</h2>
+    <h2 class="title is-2 section-title text-custom">Nos missions</h2>
     
         <div class="columns is-multiline">
         
@@ -170,7 +170,7 @@
     
     <section class="section">
     <div class="container">
-    <h2 class="title is-2 section-title">Actualités</h2>
+    <h2 class="title is-2 section-title text-custom">Actualités</h2>
     
         <div class="columns is-multiline">
         
@@ -201,7 +201,7 @@
     </section>
 <section class="section">
     <div class="container">
-    <h2 class="title is-2 section-title">Contactez-nous</h2>
+    <h2 class="title is-2 section-title text-custom">Contactez-nous</h2>
       <form action="https://formspree.io/f/xnjnolje" method="POST">
         <div class="field">
           <label class="label">Nom</label>
@@ -243,6 +243,24 @@
 
 
     <script>
+        function initMap() {
+            // Coordonnées de l'adresse (exemple : Paris)
+            const location = { lat: 48.8566, lng: 2.3522 };
+
+            // Création de la carte
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: location,
+            });
+
+            // Ajout d'un marqueur
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Notre adresse",
+            });
+        }
+  document.addEventListener('DOMContentLoaded', () => {
     // Récupère tous les éléments "navbar-burger"
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
